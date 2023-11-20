@@ -19,100 +19,6 @@ import { visuallyHidden } from "@mui/utils";
 
 import { useLocation } from "react-router-dom";
 
-const data = [
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "2021 Newest Dell Inspiron 5515 Touch Lap...",
-    price: "$1,029.00",
-    website: "amazon",
-    link: "www.amazon.com/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_aps_sr_pg1_1?ie=UTF8&adId=A09328651DRJSCF6QY9WN&url=%2FDell-5515-Touchscreen-i7-1065G7-Fingerprint%2Fdp%2FB098H2JNL4%2Fref%3Dsr_1_1_sspa%3Fkeywords%3Ddell%26qid%3D1637811187%26sr%3D8-1-spons%26psc%3D1&qualifier=1637811187&id=6774722380455436&widgetName=sp_atf"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Vostro 14 3400 Business Laptop Comp...",
-    price: "$1,389.00",
-    website: "amazon",
-    link: "www.amazon.com/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_aps_sr_pg1_1?ie=UTF8&adId=A02997633HO9OJMOS9HIO&url=%2FDell-14-3400-Anti-Glare-Quad-Core%2Fdp%2FB098NMVTJ1%2Fref%3Dsr_1_2_sspa%3Fkeywords%3Ddell%26qid%3D1637811187%26sr%3D8-2-spons%26psc%3D1&qualifier=1637811187&id=6774722380455436&widgetName=sp_atf"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Inspiron 15 5510, 15.6-inch FHD Non...",
-    price: "$679.98",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Inspiron-5510-Laptop-Notebook/dp/B08QN5J2DY/ref=sr_1_3?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-3&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Inspiron 15 3000 Business Laptop (2...",
-    price: "$549.00",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Inspiron-Dual-Core-Processor-Bluetooth/dp/B09J76DLQH/ref=sr_1_4?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-4&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell XPS 13 (9310), 13.4- inch FHD+ Touc...",
-    price: "$1,599.99",
-    website: "amazon",
-    link: "www.amazon.com/Dell-13-4-inch-Touch-Laptop/dp/B08ML2PW6W/ref=sr_1_5?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-5&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Inspiron 3583 15” Laptop Intel Cele...",
-    price: "$334.00",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Inspiron-3583-Laptop-Celeron/dp/B08HSNRFTX/ref=sr_1_6?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-6&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Inspiron 7700 All in One Desktop 27...",
-    price: "$1,399.99",
-    website: "amazon",
-    link: "www.amazon.com/Dell-7700-Touchscreen-i7-1165G7-Processor/dp/B09JR3QVBD/ref=sr_1_7?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-7&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Optiplex 7050 SFF Desktop PC Intel ...",
-    price: "$569.99",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Optiplex-Desktop-Excellent-Condition/dp/B08X1KKVCZ/ref=sr_1_8?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-8&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "2021 Newest Dell Inspiron 3000 Laptop, 1...",
-    price: "$439.00",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Inspiron-LED-Backlit-Processor-Bluetooth/dp/B08X1D9WWJ/ref=sr_1_9?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-9&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Inspiron 3880 Desktop Computer - In...",
-    price: "$818.00",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Inspiron-Desktop-3880-Site/dp/B08BS5LW7X/ref=sr_1_10?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-10&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Optiplex 7050 SFF Desktop PC Intel ...",
-    price: "$569.99",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Optiplex-Desktop-Excellent-Condition/dp/B08X1KKVCZ/ref=sr_1_8?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-8&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "2021 Newest Dell Inspiron 3000 Laptop, 1...",
-    price: "$439.00",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Inspiron-LED-Backlit-Processor-Bluetooth/dp/B08X1D9WWJ/ref=sr_1_9?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-9&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Inspiron 3880 Desktop Computer - In...",
-    price: "$818.00",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Inspiron-Desktop-3880-Site/dp/B08BS5LW7X/ref=sr_1_10?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-10&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  }
-];
-
 const useStyles = makeStyles({
   root: {
     minWidth: 275
@@ -206,13 +112,23 @@ const headCells = [
  * @param {*} props props passed from the parent component
  * @returns
  */
-function EnhancedTableHead(props) {
-  const { order, orderBy, rowCount, onRequestSort } = props;
+const EnhancedTableHead = (props) => {
+  const { order, orderBy, rowCount, onRequestSort, minRating, setMinRating } = props;
   const createSortHandler = (property) => (event) => {
     onRequestSort(event, property);
   };
 
   return (
+    <div>
+      <div>
+        <label htmlFor="minRating">Minimum Rating:</label>
+        <input
+          type="number"
+          id="minRating"
+          value={minRating}
+          onChange={(e) => setMinRating(e.target.value)}
+        />
+      </div>
     <TableHead>
       <TableRow>
         {headCells.map((headCell) => (
@@ -238,6 +154,7 @@ function EnhancedTableHead(props) {
         ))}
       </TableRow>
     </TableHead>
+  </div>
   );
 }
 
@@ -245,7 +162,9 @@ EnhancedTableHead.propTypes = {
   onRequestSort: PropTypes.func.isRequired,
   order: PropTypes.oneOf(["asc", "desc"]).isRequired,
   orderBy: PropTypes.string.isRequired,
-  rowCount: PropTypes.number.isRequired
+  rowCount: PropTypes.number.isRequired,
+  minRating: PropTypes.number.isRequired, 
+  setMinRating: PropTypes.func.isRequired,
 };
 
 const EnhancedTableToolbar = () => {
@@ -276,8 +195,10 @@ export default function Results() {
   const [orderBy, setOrderBy] = React.useState("price");
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [minRating, setMinRating] = React.useState(0);
 
   let rows = null;
+  
 
   if (location.state == null) {
     return (
@@ -335,37 +256,45 @@ export default function Results() {
                 orderBy={orderBy}
                 onRequestSort={handleRequestSort}
                 rowCount={rows.length}
+                minRating={minRating}
+                setMinRating={setMinRating}
               />
               <TableBody>
                 {rows
                   .slice()
                   .sort(getComparator(order, orderBy))
                   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .filter((row) => parseFloat(row.rating) >= minRating)
                   .map((row, index) => {
                     const labelId = `enhanced-table-checkbox-${index}`;
-
-                    return (
-                      <TableRow key={index}>
-                        <TableCell align="center"><img src={row.image} width="400px" height="400px" /></TableCell>
-                        <TableCell component="th" id={labelId} scope="row" align="center" padding="none">
-                          {row.timestamp}
-                        </TableCell>
-                        <TableCell align="center">{row.title}</TableCell>
-                        <TableCell align="center">{row.price}</TableCell>
-                        <TableCell align="center">{row.website}</TableCell>
-                        <TableCell align="center">
-                          {row.link == null ? (
-                            "No link"
-                          ) : (
-                            <Link href={getClickableLink(row.link)} target="_blank" rel="noopener">
-                              Link
-                            </Link>
-                          )}
-                        </TableCell>
-                        <TableCell align="center">{row.rating}</TableCell>
-                      </TableRow>
-                    );
-                  })}
+                  if (parseFloat(row.rating) >= minRating) {
+                  return (
+                    <TableRow key={index}>
+                      <TableCell align="center"><img src={row.image} width="400px" height="400px" /></TableCell>
+                      <TableCell component="th" id={labelId} scope="row" align="center" padding="none">
+                        {row.timestamp}
+                      </TableCell>
+                      <TableCell align="center">{row.title}</TableCell>
+                      <TableCell align="center">{row.price}</TableCell>
+                      <TableCell align="center">{row.website}</TableCell>
+                      <TableCell align="center">
+                        {row.link == null ? (
+                          "No link"
+                        ) : (
+                          <Link href={getClickableLink(row.link)} target="_blank" rel="noopener">
+                            Link
+                          </Link>
+                        )}
+                      </TableCell>
+                      <TableCell align="center">{row.rating}</TableCell>
+                    </TableRow>
+                  );
+                  }
+                  else {
+                    return null; 
+                  }
+                }
+                  )}
                 {emptyRows > 0 && (
                   <TableRow
                     style={{
