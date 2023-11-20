@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { makeStyles } from "@mui/styles";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
@@ -15,9 +16,11 @@ import TableRow from "@mui/material/TableRow";
 import TableSortLabel from "@mui/material/TableSortLabel";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
+import Button from "@mui/material/Button";
 import { visuallyHidden } from "@mui/utils";
-
 import { useLocation } from "react-router-dom";
+import { useCart } from './Cart';
+import { CartProvider } from './Cart';
 
 const data = [
   {
@@ -213,6 +216,7 @@ function EnhancedTableHead(props) {
   };
 
   return (
+    <div>
     <TableHead>
       <TableRow>
         {headCells.map((headCell) => (
@@ -238,6 +242,7 @@ function EnhancedTableHead(props) {
         ))}
       </TableRow>
     </TableHead>
+    </div>
   );
 }
 
@@ -265,20 +270,104 @@ const EnhancedTableToolbar = () => {
     </Toolbar>
   );
 };
+const CurrencySelector = ({ selectedCurrency, handleCurrencyChange }) => {
+  const [exchangeRates, setExchangeRates] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchExchangeRates = async () => {
+      try {
+        const response = await axios.get(
+          'https://open.er-api.com/v6/latest'
+        );
+        setExchangeRates(response.data.rates);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching exchange rates:', error);
+      }
+    };
+
+    fetchExchangeRates();
+  }, []);
+
+  const currencies = Object.keys(exchangeRates);
+
+  if (loading) {
+    return <div>Loading exchange rates...</div>;
+  }
+
+  return (
+    <div>
+      <label htmlFor="currency">Select Currency: </label>
+      <select
+        id="currency"
+        value={selectedCurrency}
+        onChange={(e) => handleCurrencyChange(e.target.value)}
+      >
+        {currencies.map((currency) => (
+          <option key={currency} value={currency}>
+            {currency}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+};
 
 /**
  * Genrates the results table
  * @returns
  */
 export default function Results() {
+  const { addToCart } = useCart();
   const location = useLocation();
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("price");
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
-
+  const [cart, setCart] = useState([]);
+  const [selectedCurrency, setSelectedCurrency] = useState('USD');
   let rows = null;
 
+  const [exchangeRates, setExchangeRates] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchExchangeRates = async () => {
+      try {
+        const response = await axios.get(
+          'https://open.er-api.com/v6/latest'
+        );
+        setExchangeRates(response.data.rates);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching exchange rates:', error);
+      }
+    };
+
+    fetchExchangeRates();
+  }, []);
+
+  const convertPriceToSelectedCurrency = (originalPrice, targetCurrency) => {
+    try {
+      if (!exchangeRates || !exchangeRates[targetCurrency]) {
+        throw new Error('Invalid exchange rate for the selected currency');
+      }
+
+      const conversionRate = exchangeRates[targetCurrency];
+
+      // Use the exchange rate to perform the currency conversion
+      const convertedAmount = (parseFloat(originalPrice.replace('$', '')) * conversionRate).toFixed(2);
+      return `${convertedAmount}`;
+    } catch (error) {
+      console.error('Error converting currency:', error);
+      return 'N/A';
+    }
+  };
+
+  const getPriceInSelectedCurrency = (originalPrice) => {
+    return `${selectedCurrency} ${convertPriceToSelectedCurrency(originalPrice, selectedCurrency)}`;
+  };
   if (location.state == null) {
     return (
       <div>
@@ -305,6 +394,16 @@ export default function Results() {
     setPage(0);
   };
 
+  const handleAddToCart = (item) => {
+    addToCart(item);
+    alert(`Item "${item.title}" added to the cart!`);
+  };
+
+  const handleCurrencyChange = (currency) => {
+    setSelectedCurrency(currency);
+  };
+
+  
   const getClickableLink = (link) => {
     if (link == null) {
       return "";
@@ -327,6 +426,8 @@ export default function Results() {
     return (
       <Box sx={{ width: "100%" }}>
         <Paper sx={{ width: "100%", mb: 2 }}>
+        <CurrencySelector selectedCurrency={selectedCurrency} handleCurrencyChange={handleCurrencyChange} />
+
           <EnhancedTableToolbar />
           <TableContainer>
             <Table sx={{ minWidth: 750 }} aria-labelledby="tableTitle" size={"medium"}>
@@ -351,7 +452,7 @@ export default function Results() {
                           {row.timestamp}
                         </TableCell>
                         <TableCell align="center">{row.title}</TableCell>
-                        <TableCell align="center">{row.price}</TableCell>
+                        <TableCell align="center">{getPriceInSelectedCurrency(row.price)}</TableCell>
                         <TableCell align="center">{row.website}</TableCell>
                         <TableCell align="center">
                           {row.link == null ? (
@@ -363,6 +464,9 @@ export default function Results() {
                           )}
                         </TableCell>
                         <TableCell align="center">{row.rating}</TableCell>
+                        <TableCell align="center">
+                           <Button onClick={() => handleAddToCart(row)}>Add to Cart</Button>
+                      </TableCell>
                       </TableRow>
                     );
                   })}
@@ -372,7 +476,7 @@ export default function Results() {
                       height: 53 * emptyRows
                     }}
                   >
-                    <TableCell colSpan={6} />
+                    <TableCell colSpan={7} />
                   </TableRow>
                 )}
               </TableBody>
