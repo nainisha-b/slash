@@ -7,13 +7,12 @@ The script in this file uses a command-line tool that allows the user to search 
 The code that implements this feature can be found [here](https://github.com/nainisha-b/slash/blob/main/src/slash.py)
 
 # Code Description
-## Functions
-main():
-1. Import modules:
+Import modules:
 - argparse is a standard library for parsing command-line arguments.
 - tabulate is a library for formatting and displaying tabular data.
 - scraper is presumably a module or script that contains the scrape function for fetching product information.
-2. Argument Parsing
+# Functions
+1. Argument Parsing
 The script uses the argparse module to define command-line arguments. These include:
 - search: The search query for products.
 - num: The maximum number of records to fetch (default is 3).
@@ -22,11 +21,11 @@ The script uses the argparse module to define command-line arguments. These incl
 - des: A flag to indicate whether to sort in descending order.
 - The argparse.ArgumentParser class is used to handle the command-line arguments, and parser.parse_args() is called to parse the command-line arguments provided by the user.
  
-3. Web Scrapping
+2. Web Scrapping
 - The scrape function from the scraper module is called with the parsed command-line arguments (args) and a list of websites to scrape (['walmart', 'amazon', 'costco','bestbuy','ebay']).
 - The result is stored in the products variable.
  
-4. Tabulate Display
+3. Tabulate Display
 - The tabulate function is used to format and print the scraped product information in tabular form.
 - Products is assumed to be a list of dictionaries, and headers="keys" is used to use dictionary keys as column headers.
 - tablefmt="github" specifies the table format for GitHub-flavored markdown.
