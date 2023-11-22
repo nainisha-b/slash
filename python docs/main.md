@@ -36,6 +36,3 @@ Import modules:
 - getFloatPrice: Helper function to extract a floating-point price from a string.
 8. Application Entry Point:
 - Runs the FastAPI application using the UVicorn server on http://0.0.0.0:8000.
-
-
-# How to run this file?
