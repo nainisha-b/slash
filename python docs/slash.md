@@ -30,5 +30,3 @@ The script uses the argparse module to define command-line arguments. These incl
 - Products is assumed to be a list of dictionaries, and headers="keys" is used to use dictionary keys as column headers.
 - tablefmt="github" specifies the table format for GitHub-flavored markdown.
 
-
-# How to run this file?
