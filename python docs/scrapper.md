@@ -28,5 +28,3 @@ Import modules:
 - searchWalmart is a function that searches for a given query on Walmart.
 - Similar to searchAmazon, it formats the search query, constructs the Walmart search URL, makes an HTTP request, and extracts information from the page using BeautifulSoup.
 - The extracted information is formatted using a function from the formatter module, and the results are stored in a list.
-
-# How to run this file?
