@@ -7,11 +7,11 @@ The functions in the scrapper.py allow you to search for products on Amazon and 
 The code that implements this feature can be found [here](https://github.com/nainisha-b/slash/blob/main/src/scraper.py)
 
 # Code Description
-Import modules:
+## Import modules:
 - requests: A library for making HTTP requests.
 - formatter: Presumably a custom module containing functions for formatting search queries and results.
 - BeautifulSoup: A library for pulling data out of HTML and XML files.
-# Functions
+## Functions
 1. httpsGet(URL): 
 - httpsGet is a function that performs an HTTP GET request to the specified URL with custom headers to mimic a web browser.
 - It uses the requests library to make the request and BeautifulSoup to parse the HTML content of the page.
