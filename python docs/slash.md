@@ -7,11 +7,11 @@ The script in this file uses a command-line tool that allows the user to search 
 The code that implements this feature can be found [here](https://github.com/nainisha-b/slash/blob/main/src/slash.py)
 
 # Code Description
-Import modules:
+## Import modules:
 - argparse is a standard library for parsing command-line arguments.
 - tabulate is a library for formatting and displaying tabular data.
 - scraper is presumably a module or script that contains the scrape function for fetching product information.
-# Functions
+## Functions
 1. Argument Parsing
 The script uses the argparse module to define command-line arguments. These include:
 - search: The search query for products.
