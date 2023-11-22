@@ -1,4 +1,4 @@
-# About Slash/scrapper.py
+# About Slash/scraper.py
 Slash, the openly accessible web API framework, empowers you to scour the top e-commerce sites for unbeatable deals on your favorite items across a multitude of online shopping destinations. Currently supported websites include Amazon, Walmart, Target, BestBuy, Costco, EBay and The Home Depot.
 
 The functions in the scrapper.py allow you to search for products on Amazon and Walmart, retrieving and formatting relevant information from the search results.
