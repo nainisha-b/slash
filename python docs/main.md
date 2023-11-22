@@ -7,7 +7,7 @@ The script in the main.py file describes a web API using FastAPI to search and a
 The code that implements this feature can be found [here](https://github.com/nainisha-b/slash/blob/main/src/main.py)
 
 # Code Description
-Import modules:
+## Import modules:
 - uvicorn: A lightweight ASGI server for running FastAPI applications.
 - FastAPI: A modern, fast (high-performance), web framework for building APIs with Python 3.7+.
 - CORSMiddleware: Middleware for handling Cross-Origin Resource Sharing (CORS).
@@ -15,7 +15,7 @@ Import modules:
 - BaseModel: A base class for creating data models using Pydantic.
 - csv: A module for reading and writing CSV files.
 - scraper.scraper as scr: Importing the scraper module (presumably for web scraping).
-# Functions
+## Functions
 1. FastAPI Application Initialization:
  - Initializes a FastAPI application.   
 2. CORS Middleware Configuration:
