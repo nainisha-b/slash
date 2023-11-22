@@ -4,7 +4,7 @@ Slash, the openly accessible web API framework, empowers you to scour the top e-
 This functionality of the code is web scraping that fetches product information from various online retailers using their respective APIs. The script is organized into functions, each responsible for scraping a specific online retailer's API.
 
 # Location of Code for this Feature
-The code that implements this feature can be found [here](https://github.com/nainisha-b/slash/blob/main/src/configs.py)
+The code that implements this feature can be found [here](https://github.com/nainisha-b/slash/blob/main/src/scraper/configs.py)
 
 # Code Description
 ## Import modules:
