@@ -4,10 +4,10 @@ Thank you so much for taking an interest in contributing! We are delighted when 
 
 ## 🤔 What should I know before I get started?
 
-1. Check [README.md](https://github.com/NCSU-Group7-SE2021/slash/blob/main/README.md)
-2. Check [requirements.txt](https://github.com/NCSU-Group7-SE2021/slash/blob/main/requirements.txt)
-3. Check [setup.py](https://github.com/NCSU-Group7-SE2021/slash/blob/main/setup.py)
-4. Check [issues](https://github.com/NCSU-Group7-SE2021/slash/issues).
+1. Check [README.md](https://github.com/nainisha-b/slash/blob/main/README.md)
+2. Check [requirements.txt](https://github.com/nainisha-b/slash/blob/main/requirements.txt)
+3. Check [setup.py](https://github.com/nainisha-b/slash/blob/main/setup.py)
+4. Check [issues](https://github.com/nainisha-b/slash/issues).
 
 Understand the current and future scope.
 
