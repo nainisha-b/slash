@@ -12,20 +12,21 @@ Thank you so much for taking an interest in contributing! We are delighted when 
 Understand the current and future scope.
 
 ## 🪲 Reporting Bugs
-This section guides you through submitting a bug report for this repository. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior, and find related reports. Before creating bug reports, please perform a cursory search to see if the problem has already been reported. If it has and the issue is still open, add a comment to the existing issue instead of opening a new one. Note: If you find a Closed issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
+This section provides instructions on how to submit a bug report for this repository. Adhering to these guidelines assists maintainers and the community in comprehending your report, replicating the issue, and identifying related reports. Before initiating bug reports, please conduct a preliminary search to check if the problem has already been reported. If it has and the problem is still unresolved, comment on the existing issue rather than creating a new one. Note: If you come across a closed issue that appears to match your experience, open a new issue and provide a link to the original issue in the body of your new report.
 
 ### How Do I Submit A (Good) Bug Report?
 
 Bugs are tracked as GitHub issues. After you've determined which repository your bug is related to, create an issue on that repository and provide the following information by filling in the template.
 
 Explain the problem and include additional details to help a developer reproduce the problem:
-*	Use a clear and descriptive title for the issue to identify the problem.
-*	Describe the exact steps which reproduce the problem in as many details as possible. Along with it, provide the details regarding the name and version of OS, Python version, configuration of the environment, if used any.
-*	Provide specific examples to demonstrate the steps. Include links to files or GitHub projects, or copy/paste able snippets, which you use in those examples. If you're providing snippets in the issue, use Markdown code blocks.
-*	Describe the behavior you observed after following the steps and point out what exactly is the problem with that behavior.
-*	Explain which behavior you expected to see instead and why.
-*	If the problem is related to performance or memory, include details of the errors encountered with your report.
-*	Can you reliably reproduce the issue? If not, provide details about how often the problem happens and under which conditions it normally happens.
+
+- Use a clear and descriptive title for the issue to identify the problem.
+- Describe the exact steps which reproduce the problem in as many details as possible. Along with it, provide the details regarding the name and version of OS, Python version, configuration of the environment, if used any.
+- Provide specific examples to demonstrate the steps. Include links to files or GitHub projects, or copy/paste able snippets, which you use in those examples. If you're providing snippets in the issue, use Markdown code blocks.
+- Describe the behavior you observed after following the steps and point out what exactly is the problem with that behavior.
+- Explain which behavior you expected to see instead and why.
+- If the problem is related to performance or memory, include details of the errors encountered with your report.
+- Can you reliably reproduce the issue? If not, provide details about how often the problem happens and under which conditions it normally happens.
 
 ### Before Submitting A Bug Report
 
@@ -77,12 +78,12 @@ E.g., moksh-7-sept-web-scraping
 This method allows for easy tracking of different developers’ work and progress with additional systems.
 
 ## ✔️ Attribution
-These Contributing guidelines are adapted from the [Atom's](https://github.com/atom/atom/blob/master/CONTRIBUTING.md) contributing guidelines.
+These Contributing guidelines are adapted from the [Atom's](https://github.com/nainisha-b/slash/blob/main/CONTRIBUTING.md) contributing guidelines.
 
 ## 💻 Contributors
 
 ### Phase 2 Team Members
-* [Nisarg](https://github.com/nisarg20)
-* [Aniruddha Rajnekar](https://github.com/Aniruddha-Rajnekar)
-* [Chaitanya Srusti](https://github.com/ChaitanyaS182K)
-* [Mitesh Agarwal](https://github.com/Mitesh24100)
+* [Nainisha Bhallamudi](https://github.com/nisarg20)
+* [Anvitha Reddy Gutha](https://github.com/Aniruddha-Rajnekar)
+* [Sri Vaishnavi Mylavarapu](https://github.com/SriVaishnaviM)
+
