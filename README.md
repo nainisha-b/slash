@@ -195,11 +195,10 @@ Please refer to these API documentation links for details on how to use them in 
 
 ## Phase 2 Team Members
 
-- [Chaitanya Srusti](https://github.com/ChaitanyaS182k)
-- [Nisarg Doshi](https://github.com/Nisarg20)
-- [Aniruddha Rajnekar](https://github.com/Aniruddha-Rajnekar)
-- [Mitesh Agarwal](https://github.com/mitesh24100)
+- [Nainisha Bhallamudi](https://github.com/nainisha-b)
+- [Anvitha Reddy Gutha](https://github.com/AnvithaReddyGutha)
+- [Sri Vaishnavi Mylavarapu](https://github.com/SriVaishnaviM)
 
 ## :email: Support
 
-For any queries and help, please reach out to us at: slashncsu70@gmail.com
+For any queries and help, please reach out to us at: 
