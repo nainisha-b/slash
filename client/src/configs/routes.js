@@ -4,6 +4,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import Menu from "../components/Menu";
 import Graphs from "../components/Graphs";
 import Results from "../components/Results";
+import { CartProvider } from '../components/Cart';
 import SummarizeIcon from "@mui/icons-material/Summarize";
 import EqualizerIcon from "@mui/icons-material/Equalizer";
 import InsightsIcon from "@mui/icons-material/Insights";
@@ -25,6 +26,12 @@ export const routes = [
     path: "/graphs",
     name: "Graphs",
     element: <Graphs />,
+    icon: <InsightsIcon />
+  },
+  {
+    path: "/cart",
+    name: "Cart",
+    element: <CartProvider />,
     icon: <InsightsIcon />
   }
 ];
