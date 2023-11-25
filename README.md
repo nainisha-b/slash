@@ -24,12 +24,15 @@ Slash, the openly accessible web API framework, empowers you to scour the top e-
 ---
 
 ## :rocket: What's new? 
-We have added a lot of new features to slash in our Phase-II.
+We have added a lot of new features to slash in our Phase-II:
 
 1. A web interface for users to interact with the application in a more personalised way.
 2. Substituted web scraping with website product APIs for enhanced efficiency and speed.
 3. Added a new e-commerce website [Home Depot](https://www.homedepot.com/)
 4. Added the reviews section where users can see review of the product on respective e-commerce website.
+
+Features added in the Phase-III:
+
 
 ## :page_facing_up: Why
 
