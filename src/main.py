@@ -2,12 +2,14 @@
 import uvicorn
 from typing import Optional
 from typing import List
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
 from fastapi.responses import FileResponse
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 import csv
+import json
 
 # local imports
 import scraper.scraper as scr
@@ -303,6 +305,41 @@ def getFloatPrice(price):
         float_price = float(temp.split('.')[0])
     return float_price
 
+@app.post('/api/saveCart')
+async def save_cart(items: dict):
+    try:
+        # Load current cart data from file
+        with open('cartData.json', 'r') as file:
+            current_data = json.load(file)
 
+        # Update cart data with new items
+        new_data = {
+            "items": current_data.get("items", []) + items.get("items", [])
+        }
+
+        # Save updated cart data to file
+        with open('cartData.json', 'w') as file:
+            json.dump(new_data, file, indent=2)
+
+        return JSONResponse({"success": True})
+
+    except Exception as e:
+        print(f"Error saving cart to file: {e}")
+        return JSONResponse({"error": "Internal Server Error"}, status_code=500)
+
+@app.get('/api/getAllItems')
+async def get_all_items():
+    try:
+        # Load all items from the file
+        item_list = []
+        with open('cartData.json') as f:
+            data = json.load(f)
+
+        return JSONResponse(content=data, status_code=200)
+
+    except Exception as e:
+        print(f"Error retrieving items from file: {e}")
+        return JSONResponse({"error": "Internal Server Error"}, status_code=500)
+    
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -3,6 +3,7 @@ import Routing from "./routes/Routing";
 import Grid from "@mui/material/Grid";
 import Navigation from "./header/Navigation";
 import AppContainer from "./header/AppContainer";
+import { CartProvider } from "./components/Cart";
 
 /**
  * Constructs the template for app container
@@ -16,8 +17,10 @@ function Main() {
           <Navigation />
         </Grid>
         <Grid item lg={12}>
+          <CartProvider></CartProvider>
           <Routing />
         </Grid>
+        
       </Grid>
     </AppContainer>
   );
