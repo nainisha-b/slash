@@ -84,6 +84,6 @@ These Contributing guidelines are adapted from the [Atom's](https://github.com/n
 
 ### Phase 2 Team Members
 * [Nainisha Bhallamudi](https://github.com/nainisha-b)
-* [Anvitha Reddy Gutha](https://github.com/Aniruddha-Rajnekar)
+* [Anvitha Reddy Gutha](https://github.com/AnvithaReddyGutha)
 * [Sri Vaishnavi Mylavarapu](https://github.com/SriVaishnaviM)
 
