@@ -155,20 +155,20 @@ For the backend setup ensure that [Python](https://www.python.org/downloads/) an
 pip3 install -r requirements.txt
 ```
 ## 3. Node Setup for Front-end 
-For the frontend setup ensure that [Node](https://nodejs.org/en/) is preinstalled.
+- For the frontend setup ensure that [Node](https://nodejs.org/en/) is preinstalled.
 
 ```
 Install node 18.17.1 #installing older version of node.js
 ```
 
-All the node requirements are listed in `client/package.json` file. Use npm to install all of those.
+- All the node requirements are listed in `client/package.json` file. Use npm to install all of those.
 
 ```
 cd client
 npm install --legacy-peer-deps
 ```
 
-For the login page setup, to install all the requirements which are listed in 'LoginPage/package.json' file. Use npm to install all of those.
+- For the login page setup, to install all the requirements which are listed in 'LoginPage/package.json' file. Use npm to install all of those.
 
 ```
 cd LoginPage
@@ -177,15 +177,24 @@ npm install mysql
 npm install cors
 npm install nodemon
 ```
+- In login page, go to services.js and update line 72 the cwd with your folder where npm start should be executed.
+
+#### Common Error faced:
+```
+cd slash
+cd package.json
+```
+- For Mac:
+In scripts line 72 change the start, give the value as "start": "react-scripts --openssl-legacy-provider start",
 
 ## 4. Setting Up SQL Work Bench:
 For MySQL Workbench setup, 
-Importing db schema
+- Importing db schema
    <p align="center"><img width="500" src="./assets/SQL_Dump.png"></p>
-Changing db credentials from services.js
+- Changing db credentials from services.js
    <p align="center"><img width="500" src="./assets/dbChange.png"></p>
 
-Facing Issues?
+- Facing Issues?
 Refer to the this [Stack Overflow](https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server) Link resolution
    
 ## 5. Run the application:
