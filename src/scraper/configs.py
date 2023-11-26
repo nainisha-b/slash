@@ -57,7 +57,7 @@ def scrape_amazon(query):
     page = '/s/' + query
 
     params = {
-    'api_key': 'C924DF09E62D40F0A320D1585F0799AB',
+    'api_key': '84BD3C8D7AF74C4C9D11FF1AE0A700C1',
     'type': 'search',
     'amazon_domain': 'amazon.com',
     'search_term': query,
