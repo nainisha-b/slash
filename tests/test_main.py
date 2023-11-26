@@ -68,7 +68,7 @@ class TestMain(unittest.TestCase):
             'target': 11.0,
             'costco': 229.0,
             'bestbuy': 349.0,
-            'homedepot': 'inf',
+            'homedepot': float('inf'),
             'ebay': 329.0
         }
 
