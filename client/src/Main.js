@@ -18,7 +18,7 @@ function Main() {
         </Grid>
         <Grid item lg={12}>
           <Routing />
-        </Grid>
+        </Grid> 
       </Grid>
     </AppContainer>
   );
