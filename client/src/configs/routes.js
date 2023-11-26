@@ -4,9 +4,11 @@ import HomeIcon from "@mui/icons-material/Home";
 import Menu from "../components/Menu";
 import Graphs from "../components/Graphs";
 import Results from "../components/Results";
+import { CartProvider } from '../components/Home';
 import SummarizeIcon from "@mui/icons-material/Summarize";
 import EqualizerIcon from "@mui/icons-material/Equalizer";
 import InsightsIcon from "@mui/icons-material/Insights";
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 
 export const routes = [
   {
@@ -26,5 +28,11 @@ export const routes = [
     name: "Graphs",
     element: <Graphs />,
     icon: <InsightsIcon />
+  },
+  {
+    path: "/wishlist",
+    name: "My Wishlist",
+    element: <Home />,
+    icon: <FormatListBulletedIcon />
   }
 ];

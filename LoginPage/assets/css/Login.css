@@ -63,22 +63,39 @@ a {
 	margin: 15px 0;
 }
 
+header h1 {
+    opacity: 0;
+    font-size: 5em; /* Adjust the font size as needed */
+    color: #333; /* Darker color, you can replace this with your preferred color code */
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 button {
-	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
-	color: #FFFFFF;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
+    border-radius: 20px;
+    border: 1px solid #0563bb; /* Blue color */
+    background-color: #0563bb; /* Blue color */
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
 }
 
 button:active {
-	transform: scale(0.95);
+    transform: scale(0.95);
 }
+
 
 button:focus {
 	outline: none;
@@ -179,9 +196,9 @@ input {
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: #0563bb; /* Purple color */
+	background: -webkit-linear-gradient(to right, #308ee7, #0563bb);
+	background: linear-gradient(to right, #308ee7, #0563bb);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
