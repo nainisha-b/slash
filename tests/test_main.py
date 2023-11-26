@@ -68,6 +68,7 @@ class TestMain(unittest.TestCase):
             'target': 11.0,
             'costco': 229.0,
             'bestbuy': 349.0,
+            'homedepot': inf,
             'ebay': 329.0
         }
 
@@ -86,6 +87,7 @@ class TestMain(unittest.TestCase):
             'target': 11.0,
             'costco': 229.0,
             'bestbuy': 349.0,
+            'homedepot': inf,
             'ebay': 329.0}
 
         highest_price_link_ans = {
