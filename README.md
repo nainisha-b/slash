@@ -81,6 +81,11 @@ Future possibilities encompass the development of web applications with intuitiv
 </p>
 
 ---
+## :movie_camera: Login/Log out:
+
+## :movie_camera: Web-Application Results:
+<p align="center"><img width="700" src=""></p>
+
 
 ## :movie_camera: Checkout our video
 https://github.com/NCSU-Group70-CSC505-SE-Fall-23/slash/assets/70905787/fe229f61-2bec-4920-96f4-6b693a468bcf
