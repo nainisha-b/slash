@@ -237,12 +237,13 @@ const CurrencySelector = ({ selectedCurrency, handleCurrencyChange }) => {
   }
 
   return (
-    <div className={classes.currencySelector}>
-      <label htmlFor="currency">Select Currency: </label>
+    <div className={`${classes.currencySelector} ${classes.inputField}`}>
+      <label htmlFor="currency" className={classes.pos}>Select Currency: </label>
       <select
         id="currency"
         value={selectedCurrency}
         onChange={(e) => handleCurrencyChange(e.target.value)}
+        className={classes.pos}
       >
         {currencies.map((currency) => (
           <option key={currency} value={currency}>
@@ -267,6 +268,12 @@ export default function Results() {
   const [cart, setCart] = useState([]);
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
   let rows = null;
+  const [minRating, setMinRating] = useState(0);
+
+  const handleMinRatingChange = (event) => {
+    const newMinRating = parseInt(event.target.value, 10);
+    setMinRating(newMinRating);
+  };
 
   const classes = useStyles();
   const [exchangeRates, setExchangeRates] = useState({});
@@ -336,7 +343,7 @@ export default function Results() {
 
   const handleAddToCart = (item) => {
     addToCart(item);
-    alert(`Item "${item.title}" added to the cart!`);
+    alert(`Item "${item.title}" added to the wishlist!`);
   };
 
   const handleCurrencyChange = (currency) => {
@@ -351,6 +358,18 @@ export default function Results() {
       return link.startsWith("http://") || link.startsWith("https://") ? link : `//${link}`;
     }
   };
+
+  const sortedRows = stableSort(rows, getComparator(order, orderBy));
+
+  function stableSort(array, comparator) {
+    const stabilizedThis = array.map((el, index) => [el, index]);
+    stabilizedThis.sort((a, b) => {
+      const order = comparator(a[0], b[0]);
+      if (order !== 0) return order;
+      return a[1] - b[1];
+    });
+    return stabilizedThis.map((el) => el[0]);
+  }
 
   const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
   // const classes = useStyles();
@@ -367,9 +386,24 @@ export default function Results() {
       <Box sx={{ width: "100%", padding: 2 }}>
       <Paper sx={{ width: "100%", mb: 2, padding: 2 }}>
         <CurrencySelector selectedCurrency={selectedCurrency} handleCurrencyChange={handleCurrencyChange} />
+        <div className={`${classes.currencySelector} ${classes.inputField}`}>
+  <label htmlFor="minRating" className={classes.pos}>Select Min Rating: </label>
+  <input
+    type="number"
+    id="minRating"
+    value={minRating}
+    onChange={handleMinRatingChange}
+    min="0"
+    max="5" // Assuming ratings are on a scale of 0 to 5
+    className={classes.pos}
+  />
+</div>
+
         <EnhancedTableToolbar />
           <Grid container spacing={2}>
-            {rows.map((row, index) => (
+            {rows
+            .filter((row) => row.rating >= minRating)
+            .map((row, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
                 <Card className={classes.root}>
                   <CardMedia
@@ -399,7 +433,7 @@ export default function Results() {
                 onClick={() => handleAddToCart(row)}
                 className={classes.addToCartButton}
               >
-                Add to Cart
+                Add to Wishlist
               </Button>
                   </CardContent>
                 </Card>
@@ -407,14 +441,14 @@ export default function Results() {
             ))}
           </Grid>
           <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
-            component="div"
-            count={rows.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-          />
+          rowsPerPageOptions={[5, 10, 25]}
+          component="div"
+          count={rows.length}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+        />
         </Paper>
       </Box>
     );

@@ -132,6 +132,14 @@ const hardcodedCartData = [
     image: "https://i.ebayimg.com/thumbs/images/g/oLsAAOSwik1fj~qL/s-l140.jpg",
     rating: "Not Available",
   },
+  {
+    title: "Great Value Tomato Sauce, 8 oz Can",
+    price: "$0.48",
+    website: "walmart",
+    link: "https://www.walmart.com/ip/Great-Value-Tomato-Sauce-8-oz-Can/10415487?athbdg=L1600",
+    image: "https://i5.walmartimages.com/asr/e4ffb252-99f3-453d-9764-65a1a1cc1e50.16f5c2dd0954b853f81ed1e987960f1c.jpeg?odnHeight=180&odnWidth=180&odnBg=ffffff",
+    rating: "4.3"
+  }
 ];
 
 export default function Home() {

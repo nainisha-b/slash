@@ -8,6 +8,7 @@ import { CartProvider } from '../components/Home';
 import SummarizeIcon from "@mui/icons-material/Summarize";
 import EqualizerIcon from "@mui/icons-material/Equalizer";
 import InsightsIcon from "@mui/icons-material/Insights";
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 
 export const routes = [
   {
@@ -29,9 +30,9 @@ export const routes = [
     icon: <InsightsIcon />
   },
   {
-    path: "/cart",
-    name: "Cart",
+    path: "/wishlist",
+    name: "My Wishlist",
     element: <Home />,
-    icon: <InsightsIcon />
+    icon: <FormatListBulletedIcon />
   }
 ];
