@@ -34,8 +34,9 @@ def test_formatResults():
     prices = [BeautifulSoup('<div class="someclass">$0.99  </div>', "html.parser")]
     links = []
     images = []
+    ratings = []
 
-    product = formatter.formatResult("example", titles, prices, links, images)
+    product = formatter.formatResult("example", titles, prices, links, images,ratings)
     ans = {"title":"title", "price":"$0.99", "website":"example"}
 
     assert product["title"] == ans["title"] and product["price"] == ans["price"] and product["website"] == ans["website"]
