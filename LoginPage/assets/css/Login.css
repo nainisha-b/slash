@@ -196,9 +196,9 @@ input {
 }
 
 .overlay {
-	background: #8A2BE2; /* Purple color */
-	background: -webkit-linear-gradient(to right, #800080, #8A2BE2);
-	background: linear-gradient(to right, #800080, #8A2BE2);
+	background: #0563bb; /* Purple color */
+	background: -webkit-linear-gradient(to right, #308ee7, #0563bb);
+	background: linear-gradient(to right, #308ee7, #0563bb);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
