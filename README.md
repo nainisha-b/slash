@@ -84,7 +84,13 @@ Future possibilities encompass the development of web applications with intuitiv
 ## :movie_camera: Login/Log out:
 
 ## :movie_camera: Web-Application Results:
-<p align="center"><img width="700" src=""></p>
+### 1. Search items:
+
+### 2. Filtering Products and Currency conversion:
+- The results are displayed based on the users ratings and the selected currency.
+<p align="center"><img width="700" src="assets/Filteringandcurrencyconversion.jpeg"></p>
+
+### 3. 
 
 
 ## :movie_camera: Checkout our video
