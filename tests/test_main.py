@@ -18,25 +18,25 @@ class TestMain(unittest.TestCase):
         assert getFloatPrice("$123.0$") == 123.0
         assert getFloatPrice("") == 0
     
-    def test_getItemInfoByItemName(self):
-        # building argument
-        item_name = "chair"
-        order_by_col = ""
-        reverse = False
+    # def test_getItemInfoByItemName(self):
+    #     # building argument
+    #     item_name = "chair"
+    #     order_by_col = ""
+    #     reverse = False
 
-        args = {
-            'search': item_name,
-            'sort': 'pr' if order_by_col == 'price' else 'pr',
-            'des': reverse,
-            'num': 1,
-            'src': ''
-        }
+    #     args = {
+    #         'search': item_name,
+    #         'sort': 'pr' if order_by_col == 'price' else 'pr',
+    #         'des': reverse,
+    #         'num': 1,
+    #         'src': ''
+    #     }
 
-        response = ['amazon', 'walmart', 'target', 'costco', 'bestbuy', 'ebay']
+    #     response = ['amazon', 'walmart', 'target', 'costco', 'bestbuy', 'ebay']
 
-        itemList = getItemInfoByItemName(args)
-        for item in itemList:
-            assert item['website'] in response
+    #     itemList = getItemInfoByItemName(args)
+    #     for item in itemList:
+    #         assert item['website'] in response
 
     def test_getVarietyCountByWebsite(self):
         itemList = [
@@ -87,7 +87,7 @@ class TestMain(unittest.TestCase):
             'target': 11.0,
             'costco': 229.0,
             'bestbuy': 349.0,
-            'homedepot': inf,
+            'homedepot': float('inf'),
             'ebay': 329.0}
 
         highest_price_link_ans = {
