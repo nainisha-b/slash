@@ -30,8 +30,8 @@ We have added new exciting features to the Phase-II slash:
 1. Filtering products- Users can filter the products based on their ratings.
 2. Currency Conversion- Users have an option to view the price of the product in their desired currency. We have used an online API for the currency conversion.
 3. Add to wishlist- Users can add their products to the wishlist. Here, we used two API's getAllItems, saveCart. In wishlist, users can also refresh the wishlist to see the updated prices of the products.
-4. Logout feature
-5. Enchancement of the UI design
+4. Logout feature- Initially, users could only login but now we have added a log out button.
+5. Enchancement of the UI design- We have changed the table format to a Card format so that users can view more products at the same time.
 6. Test cases for Front-end and improved the test cases of the back-end.
    
 Features to slash in Phase-II:
@@ -82,16 +82,25 @@ Future possibilities encompass the development of web applications with intuitiv
 
 ---
 ## :movie_camera: Login/Log out:
+### 1. Create Account:
+<p align="center"><img width="700" src="assets/CreateAccount.jpeg"></p>
+
+### 2. Sign in:
+<p align="center"><img width="700" src="assets/Signin.jpeg"></p>
+
 
 ## :movie_camera: Web-Application Results:
 ### 1. Search items:
+- Users can select an item from a particular website like Amazon, Walmart from the drop box.
+<p align="center"><img width="700" src="assets/SearchItems.jpeg"></p>
 
 ### 2. Filtering Products and Currency conversion:
-- The results are displayed based on the users ratings and the selected currency.
+- The results are displayed based on the users ratings and the selected currency. Users can add their products to the wishlist.
 <p align="center"><img width="700" src="assets/Filteringandcurrencyconversion.jpeg"></p>
 
-### 3. 
-
+### 3. Wishlist:
+- The results show that users can successfully add their products to the wishlist and can refresh to see the updated prices.
+<p align="center"><img width="700" src="assets/Wishlist.jpeg"></p>
 
 ## :movie_camera: Checkout our video
 https://github.com/NCSU-Group70-CSC505-SE-Fall-23/slash/assets/70905787/fe229f61-2bec-4920-96f4-6b693a468bcf
@@ -114,7 +123,7 @@ Also, you can watch the video demo of the Slash project with audio explanation h
 - Clone the Github repository to a desired location on your computer. You will need [git](https://git-scm.com/) to be preinstalled on your machine. Once the repository is cloned, you will then `cd` into the local repository.
 
 ```
-git clone https://github.com/secheaper/slash.git
+git clone https://github.com/nainisha-b/slash.git
 cd slash
 ```
 
@@ -212,13 +221,12 @@ Here are the APIs used in our project:
   - **Ebay SDK Documentation**: [Ebay SDK Documentation](https://developer.ebay.com/support/kb-article?KBid=84)
 
 - **saveCart**:
-   This is a decorator in Flask that associates the following function with the specified URL endpoint ("/api/saveCart") and HTTP method (POST). @app 
-   refers to the Flask application instance and specifies the save_cart function to handle these requests.
+   It is associates the following function with the specified URL endpoint ("/api/saveCart") and HTTP method (POST) that specifies the save_cart 
+   function to handle these requests.
   
  - **getAllItems**:
-   This is a decorator in Flask that associates the following function with the specified URL endpoint ("/api/getAllItems") and HTTP method (GET). @app refers to the Flask 
-   application instance. So, when a client makes a GET request to "/api/getAllItems," the get_all_items function is called, and it returns a JSON response with a list of 
-   items. 
+   It associates the following function with the specified URL endpoint ("/api/getAllItems") and HTTP method (GET). So, when a client makes a GET request to 
+   "/api/getAllItems," the get_all_items function is called, and it returns a JSON response with a list of  items. 
       
    Please refer to these API documentation links for details on how to use them in our project.
 
@@ -238,6 +246,14 @@ Here are the APIs used in our project:
 - [Nainisha Bhallamudi](https://github.com/nainisha-b)
 - [Anvitha Reddy Gutha](https://github.com/AnvithaReddyGutha)
 - [Sri Vaishnavi Mylavarapu](https://github.com/SriVaishnaviM)
+
+## Phase 2 Team Members
+
+- [Chaitanya Srusti](https://github.com/ChaitanyaS182k)
+- [Nisarg Doshi](https://github.com/Nisarg20)
+- [Aniruddha Rajnekar](https://github.com/Aniruddha-Rajnekar)
+- [Mitesh Agarwal](https://github.com/mitesh24100)
+
 
 ## :email: Support
 
