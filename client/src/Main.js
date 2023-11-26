@@ -12,17 +12,14 @@ import { CartProvider } from "./components/Cart";
 function Main() {
   return (
     <AppContainer>
-      <CartProvider>
       <Grid container direction="row">
         <Grid item md={12}>
           <Navigation />
         </Grid>
-        <Grid item lg={12}>
-          
+        <Grid item lg={12}>        
           <Routing />
         </Grid> 
       </Grid>
-      </CartProvider>
     </AppContainer>
   );
 }
