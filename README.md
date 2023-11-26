@@ -29,9 +29,9 @@ We have added new exciting features to the Phase-II slash:
 
 1. Filtering products- Users can filter the products based on their ratings.
 2. Currency Conversion- Users have an option to view the price of the product in their desired currency. We have used an online API for the currency conversion.
-3. Add to wishlist- Users can add their products to the wishlist. Here, we used two API's getItems, postItems. In wishlist, users can also refresh the wishlist to see the updated prices of the products.
+3. Add to wishlist- Users can add their products to the wishlist. Here, we used two API's getAllItems, saveCart. In wishlist, users can also refresh the wishlist to see the updated prices of the products.
 4. Logout feature
-5. Enchancement of the UI
+5. Enchancement of the UI design
 6. Test cases for Front-end and improved the test cases of the back-end.
    
 Features to slash in Phase-II:
@@ -200,19 +200,29 @@ Here are the APIs used in our project:
 
   - **Ebay SDK Documentation**: [Ebay SDK Documentation](https://developer.ebay.com/support/kb-article?KBid=84)
 
-Please refer to these API documentation links for details on how to use them in our project.
+- **saveCart**:
+   This is a decorator in Flask that associates the following function with the specified URL endpoint ("/api/saveCart") and HTTP method (POST). @app 
+   refers to the Flask application instance and specifies the save_cart function to handle these requests.
+  
+ - **getAllItems**:
+   This is a decorator in Flask that associates the following function with the specified URL endpoint ("/api/getAllItems") and HTTP method (GET). @app refers to the Flask 
+   application instance. So, when a client makes a GET request to "/api/getAllItems," the get_all_items function is called, and it returns a JSON response with a list of 
+   items. 
+      
+   Please refer to these API documentation links for details on how to use them in our project.
 
 ## :golf: Future Roadmap
 
-- Host website on a public server so customers can use it
-- Add login feature to store user history to provide features like bookmarking, price drop alerts and many more.
-- Our API can be used by end users such as developers who are tech-savvy individuals looking to get a one stop solution for web scraping ecommerce websites such as Amazon, Target, Ebay,etc along with API access to multiple ecommerce websites. It'll be available directly for access to people without having to dive deep into the code.
-- Chrome Extension using the functionalities of Slash API
-- An iOS or Android application.
+1. To improve the Security of the Application.
+2. Better API to scrape website.
+3. Integrate the login page with main react application.
+4. Work on test cases to improve code coverage.
+5. Host domain on public server.
+6. Price Drop Alerts using email or text notification.
 
 # Team Members
 
-## Phase 2 Team Members
+## Phase 3 Team Members
 
 - [Nainisha Bhallamudi](https://github.com/nainisha-b)
 - [Anvitha Reddy Gutha](https://github.com/AnvithaReddyGutha)
