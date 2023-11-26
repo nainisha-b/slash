@@ -34,5 +34,9 @@ The code that implements this feature can be found [here](https://github.com/nai
 - getVarietyCountByWebsite: Counts the number of varieties for a particular item across different websites.
 - getLowestHighestPriceByWebsite: Determines the top lowest and highest prices of an item across different websites.
 - getFloatPrice: Helper function to extract a floating-point price from a string.
-8. Application Entry Point:
+8. Analysis- Save Cart API Endpoint:
+- Saves items to a shopping cart. Expects a JSON payload containing a dictionary of items. The cart data is stored in a file named cartData.json.
+9. Analysis- getAllItems API Endpoint:
+- Retrieves all items from the shopping cart. Returns the cart data stored in the cartData.json file.
+10. Application Entry Point:
 - Runs the FastAPI application using the UVicorn server on http://0.0.0.0:8000.
