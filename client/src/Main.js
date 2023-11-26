@@ -16,9 +16,9 @@ function Main() {
         <Grid item md={12}>
           <Navigation />
         </Grid>
-        <Grid item lg={12}>        
+        <Grid item lg={12}>
           <Routing />
-        </Grid> 
+        </Grid>
       </Grid>
     </AppContainer>
   );
