@@ -36,7 +36,7 @@ We have added new exciting features to the Phase-II slash:
 
 1. Filtering products- Users can filter the products based on their ratings.
 2. Currency Conversion- Users have an option to view the price of the product in their desired currency. We have used an online API for the currency conversion.
-*3. Add to wishlist- Users can add their products to the wishlist. Here, we used two API's getItems, postItems. In wishlist, users can also refresh the wishlist to see the updated prices of the products.
+3. Add to wishlist- Users can add their products to the wishlist. Here, we used two API's getItems, postItems. In wishlist, users can also refresh the wishlist to see the updated prices of the products.
 4. Logout feature
 5. Enchancement of the UI
 6. Test cases for Front-end and improved the test cases of the back-end.
