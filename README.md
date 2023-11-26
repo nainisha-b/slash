@@ -59,6 +59,14 @@ These changes have significantly improved the reliability and sustainability of 
 
 Future possibilities encompass the development of web applications with intuitive interfaces and mobile applications for Android and iOS, all powered by these web APIs. Anyone can construct their custom applications atop this foundation of web APIs.".
 
+## Why customers should choose Slash?
+
+- People often look for the best deals with good ratings.
+- The widespread availability of internet connectivity has equalized the competitive landscape in retail, enabling both individuals and businesses to market and sell products without being restricted by geographical boundaries. In 2020, e-commerce sales in the United States experienced a substantial 44% growth, largely attributed to the impact of the COVID-19 pandemic. These sales accounted for over 21% of the total retail sales, as reported by the e-commerce data source, Internet Retailer.
+- The expansion of e-commerce has not just altered the shopping habits of customers but has also influenced their expectations regarding how brands handle customer service, tailor communications, and offer a variety of choices to customers.
+- The competitive environment in the e-commerce market has led to intense rivalry among retailers, evident in the pricing strategies adopted by major market players. Discounts and price reductions have become common, and securing the most favorable deal for your money can occasionally be challenging, even in the realm of online shopping.
+- This is what Slash aims to reduce by giving you an easy to use, all in one place solution for finding the best deals where users have an oppurtunity to filter products based on the rating and cheapest prices.
+- The updated version of Slash has currency conversion which is very important now-a-days as users want to know the prices of the products in their home currency.
 ---
 
 <p align="center">
@@ -238,7 +246,7 @@ Here are the APIs used in our project:
 4. Work on test cases to improve code coverage.
 5. Host domain on public server.
 6. Price Drop Alerts using email or text notification.
-
+- Refer the issues- https://github.com/nainisha-b/slash/issues
 # Team Members
 
 ## Phase 3 Team Members
