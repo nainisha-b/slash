@@ -230,4 +230,4 @@ Here are the APIs used in our project:
 
 ## :email: Support
 
-For any queries and help, please reach out to us at: 
+For any queries and help, please reach out to us at: slashteam68@gmail.com
