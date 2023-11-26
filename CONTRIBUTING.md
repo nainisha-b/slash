@@ -4,28 +4,29 @@ Thank you so much for taking an interest in contributing! We are delighted when 
 
 ## 🤔 What should I know before I get started?
 
-1. Check [README.md](https://github.com/NCSU-Group7-SE2021/slash/blob/main/README.md)
-2. Check [requirements.txt](https://github.com/NCSU-Group7-SE2021/slash/blob/main/requirements.txt)
-3. Check [setup.py](https://github.com/NCSU-Group7-SE2021/slash/blob/main/setup.py)
-4. Check [issues](https://github.com/NCSU-Group7-SE2021/slash/issues).
+1. Check [README.md](https://github.com/nainisha-b/slash/blob/main/README.md)
+2. Check [requirements.txt](https://github.com/nainisha-b/slash/blob/main/requirements.txt)
+3. Check [setup.py](https://github.com/nainisha-b/slash/blob/main/setup.py)
+4. Check [issues](https://github.com/nainisha-b/slash/issues).
 
 Understand the current and future scope.
 
 ## 🪲 Reporting Bugs
-This section guides you through submitting a bug report for this repository. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior, and find related reports. Before creating bug reports, please perform a cursory search to see if the problem has already been reported. If it has and the issue is still open, add a comment to the existing issue instead of opening a new one. Note: If you find a Closed issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
+This section provides instructions on how to submit a bug report for this repository. Adhering to these guidelines assists maintainers and the community in comprehending your report, replicating the issue, and identifying related reports. Before initiating bug reports, please conduct a preliminary search to check if the problem has already been reported. If it has and the problem is still unresolved, comment on the existing issue rather than creating a new one. Note: If you come across a closed issue that appears to match your experience, open a new issue and provide a link to the original issue in the body of your new report.
 
 ### How Do I Submit A (Good) Bug Report?
 
 Bugs are tracked as GitHub issues. After you've determined which repository your bug is related to, create an issue on that repository and provide the following information by filling in the template.
 
 Explain the problem and include additional details to help a developer reproduce the problem:
-*	Use a clear and descriptive title for the issue to identify the problem.
-*	Describe the exact steps which reproduce the problem in as many details as possible. Along with it, provide the details regarding the name and version of OS, Python version, configuration of the environment, if used any.
-*	Provide specific examples to demonstrate the steps. Include links to files or GitHub projects, or copy/paste able snippets, which you use in those examples. If you're providing snippets in the issue, use Markdown code blocks.
-*	Describe the behavior you observed after following the steps and point out what exactly is the problem with that behavior.
-*	Explain which behavior you expected to see instead and why.
-*	If the problem is related to performance or memory, include details of the errors encountered with your report.
-*	Can you reliably reproduce the issue? If not, provide details about how often the problem happens and under which conditions it normally happens.
+
+- Use a clear and descriptive title for the issue to identify the problem.
+- Describe the exact steps which reproduce the problem in as many details as possible. Along with it, provide the details regarding the name and version of OS, Python version, configuration of the environment, if used any.
+- Provide specific examples to demonstrate the steps. Include links to files or GitHub projects, or copy/paste able snippets, which you use in those examples. If you're providing snippets in the issue, use Markdown code blocks.
+- Describe the behavior you observed after following the steps and point out what exactly is the problem with that behavior.
+- Explain which behavior you expected to see instead and why.
+- If the problem is related to performance or memory, include details of the errors encountered with your report.
+- Can you reliably reproduce the issue? If not, provide details about how often the problem happens and under which conditions it normally happens.
 
 ### Before Submitting A Bug Report
 
@@ -47,8 +48,8 @@ Enhancement suggestions are tracked as GitHub issues. Create an issue on that re
 
 ## 🙇 Pull Requests
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a build.
-2. Update the [README.md](https://github.com/NCSU-Group7-SE2021/slash/blob/main/README.md) with details of changes to the interface, this includes new environment variables, exposed ports, useful file locations and container parameters.
-3. Increase the version numbers in any examples files and the [README.md](https://github.com/NCSU-Group7-SE2021/slash/blob/main/README.md) to the new version that this Pull Request would represent. The versioning scheme we use is SemVer.
+2. Update the [README.md](https://github.com/nainisha-b/slash/blob/main/README.md) with details of changes to the interface, this includes new environment variables, exposed ports, useful file locations and container parameters.
+3. Increase the version numbers in any examples files and the [README.md](https://github.com/nainisha-b/slash/blob/main/README.md) to the new version that this Pull Request would represent. The versioning scheme we use is SemVer.
 4. After submitting your PR, the first thing you would want to do will be a self review. Barring special circumstances, maintainers will not review PRs until all checks pass (Travis, AppVeyor, etc).
 5. One or more maintainers will use GitHub's review feature to review your PR.
 6. If the maintainer asks for any changes, edit your changes, push, and ask for another review. Additional tags (such as needs-tests) will be added depending on the review.
@@ -77,12 +78,12 @@ E.g., moksh-7-sept-web-scraping
 This method allows for easy tracking of different developers’ work and progress with additional systems.
 
 ## ✔️ Attribution
-These Contributing guidelines are adapted from the [Atom's](https://github.com/atom/atom/blob/master/CONTRIBUTING.md) contributing guidelines.
+These Contributing guidelines are adapted from the [Atom's](https://github.com/nainisha-b/slash/blob/main/CONTRIBUTING.md) contributing guidelines.
 
 ## 💻 Contributors
 
 ### Phase 2 Team Members
-* [Nisarg](https://github.com/nisarg20)
-* [Aniruddha Rajnekar](https://github.com/Aniruddha-Rajnekar)
-* [Chaitanya Srusti](https://github.com/ChaitanyaS182K)
-* [Mitesh Agarwal](https://github.com/Mitesh24100)
+* [Nainisha Bhallamudi](https://github.com/nainisha-b)
+* [Anvitha Reddy Gutha](https://github.com/AnvithaReddyGutha)
+* [Sri Vaishnavi Mylavarapu](https://github.com/SriVaishnaviM)
+
