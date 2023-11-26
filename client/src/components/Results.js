@@ -21,109 +21,48 @@ import { visuallyHidden } from "@mui/utils";
 import { useLocation } from "react-router-dom";
 import { useCart } from './Cart';
 import { CartProvider } from './Cart';
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 
-const data = [
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "2021 Newest Dell Inspiron 5515 Touch Lap...",
-    price: "$1,029.00",
-    website: "amazon",
-    link: "www.amazon.com/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_aps_sr_pg1_1?ie=UTF8&adId=A09328651DRJSCF6QY9WN&url=%2FDell-5515-Touchscreen-i7-1065G7-Fingerprint%2Fdp%2FB098H2JNL4%2Fref%3Dsr_1_1_sspa%3Fkeywords%3Ddell%26qid%3D1637811187%26sr%3D8-1-spons%26psc%3D1&qualifier=1637811187&id=6774722380455436&widgetName=sp_atf"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Vostro 14 3400 Business Laptop Comp...",
-    price: "$1,389.00",
-    website: "amazon",
-    link: "www.amazon.com/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_aps_sr_pg1_1?ie=UTF8&adId=A02997633HO9OJMOS9HIO&url=%2FDell-14-3400-Anti-Glare-Quad-Core%2Fdp%2FB098NMVTJ1%2Fref%3Dsr_1_2_sspa%3Fkeywords%3Ddell%26qid%3D1637811187%26sr%3D8-2-spons%26psc%3D1&qualifier=1637811187&id=6774722380455436&widgetName=sp_atf"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Inspiron 15 5510, 15.6-inch FHD Non...",
-    price: "$679.98",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Inspiron-5510-Laptop-Notebook/dp/B08QN5J2DY/ref=sr_1_3?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-3&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Inspiron 15 3000 Business Laptop (2...",
-    price: "$549.00",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Inspiron-Dual-Core-Processor-Bluetooth/dp/B09J76DLQH/ref=sr_1_4?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-4&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell XPS 13 (9310), 13.4- inch FHD+ Touc...",
-    price: "$1,599.99",
-    website: "amazon",
-    link: "www.amazon.com/Dell-13-4-inch-Touch-Laptop/dp/B08ML2PW6W/ref=sr_1_5?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-5&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Inspiron 3583 15” Laptop Intel Cele...",
-    price: "$334.00",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Inspiron-3583-Laptop-Celeron/dp/B08HSNRFTX/ref=sr_1_6?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-6&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Inspiron 7700 All in One Desktop 27...",
-    price: "$1,399.99",
-    website: "amazon",
-    link: "www.amazon.com/Dell-7700-Touchscreen-i7-1165G7-Processor/dp/B09JR3QVBD/ref=sr_1_7?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-7&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Optiplex 7050 SFF Desktop PC Intel ...",
-    price: "$569.99",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Optiplex-Desktop-Excellent-Condition/dp/B08X1KKVCZ/ref=sr_1_8?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-8&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "2021 Newest Dell Inspiron 3000 Laptop, 1...",
-    price: "$439.00",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Inspiron-LED-Backlit-Processor-Bluetooth/dp/B08X1D9WWJ/ref=sr_1_9?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-9&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Inspiron 3880 Desktop Computer - In...",
-    price: "$818.00",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Inspiron-Desktop-3880-Site/dp/B08BS5LW7X/ref=sr_1_10?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-10&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Optiplex 7050 SFF Desktop PC Intel ...",
-    price: "$569.99",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Optiplex-Desktop-Excellent-Condition/dp/B08X1KKVCZ/ref=sr_1_8?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-8&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "2021 Newest Dell Inspiron 3000 Laptop, 1...",
-    price: "$439.00",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Inspiron-LED-Backlit-Processor-Bluetooth/dp/B08X1D9WWJ/ref=sr_1_9?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-9&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  },
-  {
-    timestamp: "24/11/2021 22:33:08",
-    title: "Dell Inspiron 3880 Desktop Computer - In...",
-    price: "$818.00",
-    website: "amazon",
-    link: "www.amazon.com/Dell-Inspiron-Desktop-3880-Site/dp/B08BS5LW7X/ref=sr_1_10?keywords=dell&qid=1637811187&qsid=145-9917619-3685023&sr=8-10&sres=B08QN5J2DY%2CB09J76DLQH%2CB08ML2PW6W%2CB08HSNRFTX%2CB09JR3QVBD%2CB08X1KKVCZ%2CB08X1D9WWJ%2CB08BS5LW7X%2CB09HJFTY8K%2CB097LS9518%2CB08FMY7SKC%2CB07TB9G2R6%2CB091H25DJ2%2CB0928N6TH3%2CB08QN2X5YK%2CB08YC8LPPK&srpt=NOTEBOOK_COMPUTER"
-  }
-];
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    minWidth: 275
+    minWidth: 275,
+    marginBottom: 20,
   },
   pos: {
-    marginBottom: 12
-  }
-});
+    marginBottom: 12,
+  },
+  cardMedia: {
+    objectFit: 'contain', // Prevent images from zooming in
+    maxHeight: 140,
+  },
+  currencySelector: {
+    marginBottom: theme.spacing(2),
+    display: 'flex',
+    alignItems: 'center',
+    '& label': {
+      marginRight: theme.spacing(1),
+    },
+    '& select': {
+      padding: theme.spacing(1),
+      fontSize: '1rem',
+      borderRadius: theme.shape.borderRadius,
+      border: `1px solid ${theme.palette.primary.main}`,
+    },
+  },
+
+  addToCartButton: {
+    backgroundColor: theme.palette.success.main,
+    color: theme.palette.success.contrastText,
+    '&:hover': {
+      backgroundColor: theme.palette.success.dark,
+    },
+  },
+}));
+
 
 /**
  * Function to compare two operators a and b
@@ -271,6 +210,7 @@ const EnhancedTableToolbar = () => {
   );
 };
 const CurrencySelector = ({ selectedCurrency, handleCurrencyChange }) => {
+  const classes = useStyles();
   const [exchangeRates, setExchangeRates] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -297,7 +237,7 @@ const CurrencySelector = ({ selectedCurrency, handleCurrencyChange }) => {
   }
 
   return (
-    <div>
+    <div className={classes.currencySelector}>
       <label htmlFor="currency">Select Currency: </label>
       <select
         id="currency"
@@ -313,7 +253,6 @@ const CurrencySelector = ({ selectedCurrency, handleCurrencyChange }) => {
     </div>
   );
 };
-
 /**
  * Genrates the results table
  * @returns
@@ -329,6 +268,7 @@ export default function Results() {
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
   let rows = null;
 
+  const classes = useStyles();
   const [exchangeRates, setExchangeRates] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -424,64 +364,48 @@ export default function Results() {
     );
   } else {
     return (
-      <Box sx={{ width: "100%" }}>
-        <Paper sx={{ width: "100%", mb: 2 }}>
-        
-          <EnhancedTableToolbar />
-          <CurrencySelector selectedCurrency={selectedCurrency} handleCurrencyChange={handleCurrencyChange} />
-          <TableContainer>
-            <Table sx={{ minWidth: 750 }} aria-labelledby="tableTitle" size={"medium"}>
-              <EnhancedTableHead
-                order={order}
-                orderBy={orderBy}
-                onRequestSort={handleRequestSort}
-                rowCount={rows.length}
-              />
-              <TableBody>
-                {rows
-                  .slice()
-                  .sort(getComparator(order, orderBy))
-                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                  .map((row, index) => {
-                    const labelId = `enhanced-table-checkbox-${index}`;
-
-                    return (
-                      <TableRow key={index}>
-                        <TableCell align="center"><img src={row.image} width="400px" height="400px" /></TableCell>
-                        <TableCell component="th" id={labelId} scope="row" align="center" padding="none">
-                          {row.timestamp}
-                        </TableCell>
-                        <TableCell align="center">{row.title}</TableCell>
-                        <TableCell align="center">{getPriceInSelectedCurrency(row.price)}</TableCell>
-                        <TableCell align="center">{row.website}</TableCell>
-                        <TableCell align="center">
-                          {row.link == null ? (
-                            "No link"
-                          ) : (
-                            <Link href={getClickableLink(row.link)} target="_blank" rel="noopener">
-                              Link
-                            </Link>
-                          )}
-                        </TableCell>
-                        <TableCell align="center">{row.rating}</TableCell>
-                        <TableCell align="center">
-                           <Button onClick={() => handleAddToCart(row)}>Add to Cart</Button>
-                      </TableCell>
-                      </TableRow>
-                    );
-                  })}
-                {emptyRows > 0 && (
-                  <TableRow
-                    style={{
-                      height: 53 * emptyRows
-                    }}
-                  >
-                    <TableCell colSpan={7} />
-                  </TableRow>
-                )}
-              </TableBody>
-            </Table>
-          </TableContainer>
+      <Box sx={{ width: "100%", padding: 2 }}>
+      <Paper sx={{ width: "100%", mb: 2, padding: 2 }}>
+        <CurrencySelector selectedCurrency={selectedCurrency} handleCurrencyChange={handleCurrencyChange} />
+        <EnhancedTableToolbar />
+          <Grid container spacing={2}>
+            {rows.map((row, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index}>
+                <Card className={classes.root}>
+                  <CardMedia
+                    component="img"
+                    alt={row.title}
+                    height="140"
+                    image={row.image}
+                    className={classes.cardMedia}
+                  />
+                  <CardContent>
+                    <Typography variant="h6">{row.title}</Typography>
+                    <Typography variant="subtitle1">
+                      Price: {getPriceInSelectedCurrency(row.price)}
+                    </Typography>
+                    <Typography variant="subtitle1">Website: {row.website}</Typography>
+                    <Typography variant="subtitle1">
+                      Link:{' '}
+                      {row.link == null ? (
+                        'No link'
+                      ) : (
+                        <Link href={row.link} target="_blank" rel="noopener">
+                          Visit
+                        </Link>
+                      )}
+                    </Typography>
+                    <Button
+                onClick={() => handleAddToCart(row)}
+                className={classes.addToCartButton}
+              >
+                Add to Cart
+              </Button>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
           <TablePagination
             rowsPerPageOptions={[5, 10, 25]}
             component="div"

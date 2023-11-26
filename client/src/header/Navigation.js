@@ -9,6 +9,7 @@ import { AppContext } from "../header/AppContext";
 import NavigationDrawer from "./NavigationDrawer";
 import { Button } from "@mui/material";
 import { createBrowserHistory } from "history";
+import Logout from "../components/Logout";
 
 const history = createBrowserHistory();
 
@@ -32,12 +33,12 @@ export default function Navigation() {
   const [isLoggedIn, setLoggedIn] = useState(true);
   
   const handleLogout = () => {
-    window.alert("User logged out successfully!");
-
+    //window.alert("User logged out successfully!");
+    setLoggedIn(false);
+    window.location.href = '/Logout';
     // Optionally, you can perform additional logout logic here
 
     // Update the login status to false
-    setLoggedIn(false);
   };
 
   const handleLogin = () => {
@@ -50,7 +51,7 @@ export default function Navigation() {
   };
   return (
     <div className={classes.root}>
-      <NavigationDrawer />
+      {isLoggedIn ? <div> <NavigationDrawer /> 
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -75,6 +76,8 @@ export default function Navigation() {
             </Button>)}
         </Toolbar>
       </AppBar>
+      </div>
+      : <div/>}
     </div>
   );
 }

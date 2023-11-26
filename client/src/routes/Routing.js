@@ -14,6 +14,7 @@ function Routing() {
         .map((route, index) => (
           <Route exact key={index} path={route.path} element={route.element} />
         ))}
+
     </Routes>
   );
 }

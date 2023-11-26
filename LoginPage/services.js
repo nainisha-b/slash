@@ -11,8 +11,8 @@ var fs = require('fs');
 var connection = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Nnd09082001*",
-    database: "database - db",
+    password: "Admin@123",
+    database: "database1",
     port: "3306"
 });
 
@@ -69,7 +69,7 @@ app.post("/Redirect", function (req, res) {
   executeNpmStart();
   function executeNpmStart() {
     const options = {
-      cwd: '/Users/nisargdoshi/Downloads/slash/slash-main/client', // Specify the folder where npm start should be executed
+      cwd: '/Users/nainisha.bhallamudi/Downloads/slash/client', // Specify the folder where npm start should be executed
     };
     const childProcess = exec('npm start', options, (error, stdout, stderr) => {
       if (error) {
@@ -86,7 +86,7 @@ app.post("/Redirect", function (req, res) {
 })
 
 
-const port = process.env.port || 5000;
+const port = process.env.port || 2000;
 app.listen(port);
 
 // console.log("App is listening on port " + port);
