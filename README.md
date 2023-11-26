@@ -27,14 +27,20 @@ Slash, the openly accessible web API framework, empowers you to scour the top e-
 ## Improvements in Phase-III:
 We have added new exciting features to the Phase-II slash:
 
-1. Filtering products- Users can filter the products based on their ratings.
-2. Currency Conversion- Users have an option to view the price of the product in their desired currency. We have used an online API for the currency conversion.
-3. Add to wishlist- Users can add their products to the wishlist. Here, we used two API's getAllItems, saveCart. In wishlist, users can also refresh the wishlist to see the updated prices of the products.
-4. Logout feature- Initially, users could only login but now we have added a log out button.
-5. Enchancement of the UI design- We have changed the table format to a Card format so that users can view more products at the same time.
-6. Test cases for Front-end and improved the test cases of the back-end.
+#### 1. Filtering products:
+- Users can filter the products based on their ratings.
+#### 2. Currency Conversion:
+- Users have an option to view the price of the product in their desired currency. We have used an online API for the currency conversion.
+#### 3. Add to wishlist: 
+- Users can add their products to the wishlist. Here, we used two API's getAllItems, saveCart. In wishlist, users can also refresh the wishlist to see the updated prices of the products.
+#### 4. Logout feature: 
+- Initially, users could only login but now we have added a log out button.
+#### 5. Enchancement of the UI design: 
+- We have changed the table format to a Card format so that users can view more products at the same time.
+#### 6. Test cases for Front end and improved the test cases of the back-end.
+
    
-Features to slash in Phase-II:
+### Features to slash in Phase-II:
 
 1. A web interface for users to interact with the application in a more personalised way.
 2. Substituted web scraping with website product APIs for enhanced efficiency and speed.
@@ -109,6 +115,11 @@ Future possibilities encompass the development of web applications with intuitiv
 ### 3. Wishlist:
 - The results show that users can successfully add their products to the wishlist and can refresh to see the updated prices.
 <p align="center"><img width="700" src="assets/Wishlist.jpeg"></p>
+
+### 4. Graphs:
+- The results of the graph show the lowest price and highest price of the product on each website.
+<p align="center"><img width="700" src="assets/Piechart.jpeg"></p>
+<p align="center"><img width="700" src="assets/Bargraph.jpeg"></p>
 
 ## :movie_camera: Checkout our video
 https://github.com/NCSU-Group70-CSC505-SE-Fall-23/slash/assets/70905787/fe229f61-2bec-4920-96f4-6b693a468bcf
