@@ -24,14 +24,7 @@ Slash, the openly accessible web API framework, empowers you to scour the top e-
 ---
 
 ## :rocket: What's new? 
-We have added a lot of new features to slash in our Phase-II:
-
-1. A web interface for users to interact with the application in a more personalised way.
-2. Substituted web scraping with website product APIs for enhanced efficiency and speed.
-3. Added a new e-commerce website [Home Depot](https://www.homedepot.com/)
-4. Added the reviews section where users can see review of the product on respective e-commerce website.
-
-Features added in the Phase-III:
+## Improvements in Phase-III:
 We have added new exciting features to the Phase-II slash:
 
 1. Filtering products- Users can filter the products based on their ratings.
@@ -40,6 +33,15 @@ We have added new exciting features to the Phase-II slash:
 4. Logout feature
 5. Enchancement of the UI
 6. Test cases for Front-end and improved the test cases of the back-end.
+   
+Features to slash in Phase-II:
+
+1. A web interface for users to interact with the application in a more personalised way.
+2. Substituted web scraping with website product APIs for enhanced efficiency and speed.
+3. Added a new e-commerce website [Home Depot](https://www.homedepot.com/)
+4. Added the reviews section where users can see review of the product on respective e-commerce website.
+
+
 
 
 ## :page_facing_up: Why
@@ -97,22 +99,30 @@ Also, you can watch the video demo of the Slash project with audio explanation h
 
 ## :rocket: Installation
 
-1. Clone the Github repository to a desired location on your computer. You will need [git](https://git-scm.com/) to be preinstalled on your machine. Once the repository is cloned, you will then `cd` into the local repository.
+## 1. Clone the Repository
+- Clone the Github repository to a desired location on your computer. You will need [git](https://git-scm.com/) to be preinstalled on your machine. Once the repository is cloned, you will then `cd` into the local repository.
 
 ```
 git clone https://github.com/secheaper/slash.git
 cd slash
 ```
 
-2. This project uses Python 3 for the backend and React along with Javascript framework for the frontend. This project employs MySQL Workbench to authenticate the users hitting on the frontend.
-
+## 2. Python installation
+- This project uses Python 3 for the backend and React along with Javascript framework for the frontend. This project employs MySQL Workbench to authenticate the users hitting on the frontend.
+  
 For the backend setup ensure that [Python](https://www.python.org/downloads/) and [Pip](https://pip.pypa.io/en/stable/installation/) are preinstalled. All the python requirements of the project are listed in the `requirements.txt` file. Use pip to install all of those.
 
 ```
 pip3 install -r requirements.txt
 ```
+## 3. Node Setup for Front-end 
+For the frontend setup ensure that [Node](https://nodejs.org/en/) is preinstalled.
 
-For the frontend setup ensure that [Node](https://nodejs.org/en/) is preinstalled. All the node requirements are listed in `client/package.json` file. Use npm to install all of those.
+```
+Install node 18.17.1 #installing older version of node.js
+```
+
+All the node requirements are listed in `client/package.json` file. Use npm to install all of those.
 
 ```
 cd client
@@ -129,6 +139,7 @@ npm install cors
 npm install nodemon
 ```
 
+## 4. Setting Up SQL Work Bench:
 For MySQL Workbench setup, 
 Importing db schema
    <p align="center"><img width="500" src="./assets/SQL_Dump.png"></p>
@@ -138,9 +149,9 @@ Changing db credentials from services.js
 Facing Issues?
 Refer to the this [Stack Overflow](https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server) Link resolution
    
+## 5. Run the application:
 
-
-3. Once all the requirements are installed, you will have to `cd` into the `src` folder. Once in the `src` folder, use the python command to run the `main.py` file.
+1. Once all the requirements are installed, you will have to `cd` into the `src` folder. Once in the `src` folder, use the python command to run the `main.py` file.
 
 ```
 cd src
@@ -152,7 +163,7 @@ For Windows
 python main.py
 ```
 
-4. Once the backend is up and running, you will have to `cd` into the `LoginPage` folder. Once in the `LoginPage` folder, use the node command to start the webserver.
+2. Once the backend is up and running, you will have to `cd` into the `LoginPage` folder. Once in the `LoginPage` folder, use the node command to start the webserver.
 
 ```
 cd LoginPage
