@@ -1,6 +1,6 @@
 # Cite as ...
 
-BurnOut,
+Slash,
 November 2023
 
 ```bibtex
