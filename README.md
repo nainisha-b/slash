@@ -1,17 +1,17 @@
 <p align="center"><img width="500" src="./assets/slash.png"></p>
 
-![GitHub](https://img.shields.io/github/license/Urvashi74/slash)
-![github workflow](https://github.com/secheaper/cheaper/actions/workflows/python-app.yml/badge.svg)
-[![DOI](https://zenodo.org/badge/431326985.svg)](https://zenodo.org/badge/latestdoi/431326985)
+![GitHub](https://img.shields.io/github/license/nainisha-b/slash)
+![github workflow](https://github.com/nainisha-b/slash/actions/workflows/python-app.yml/badge.svg)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10211127.svg)](https://doi.org/10.5281/zenodo.10211127)
 ![Github](https://img.shields.io/badge/language-python-red.svg)
 ![Github](https://img.shields.io/badge/language-node-red.svg)
-![GitHub issues](https://img.shields.io/github/issues-raw/NCSU-Group70-CSC505-SE-Fall-23/slash)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/NCSU-Group70-CSC505-SE-Fall-23/slash)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/NCSU-Group70-CSC505-SE-Fall-23/slash)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/NCSU-Group70-CSC505-SE-Fall-23/slash)
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/NCSU-Group70-CSC505-SE-Fall-23/slash)
-![GitHub repo size](https://img.shields.io/github/repo-size/NCSU-Group70-CSC505-SE-Fall-23/slash)
-[![codecov](https://codecov.io/gh/ChaitanyaS182k/Slash/graph/badge.svg?token=4Y0UH6WSDZ)](https://codecov.io/gh/ChaitanyaS182k/Slash)
+![GitHub issues](https://img.shields.io/github/issues-raw/nainisha-b/slash)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/nainisha-b/slash)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/nainisha-b/slash)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/nainisha-b/slash)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/nainisha-b/slash)
+![GitHub repo size](https://img.shields.io/github/repo-size/nainisha-b/slash)
+[![codecov](https://codecov.io/gh/nainisha-b/Slash/graph/badge.svg?token=6999632555)](https://codecov.io/gh/nainisha-b/Slash)
 
 On the hunt for incredible online deals? Meet Slash, your savvy shopping sidekick!
 
