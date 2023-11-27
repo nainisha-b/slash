@@ -121,11 +121,16 @@ Future possibilities encompass the development of web applications with intuitiv
 <p align="center"><img width="700" src="assets/Piechart.jpeg"></p>
 <p align="center"><img width="700" src="assets/Bargraph.jpeg"></p>
 
-## :movie_camera: Checkout our video
-https://github.com/NCSU-Group70-CSC505-SE-Fall-23/slash/assets/70905787/fe229f61-2bec-4920-96f4-6b693a468bcf
+## :movie_camera: Checkout our videos
+Why Slash? Why our product? Check our promo video
 
+https://github.com/nainisha-b/slash/assets/54759065/3d106a3f-263e-4b2d-b003-3083351cd8b5
 
-Also, you can watch the video demo of the Slash project with audio explanation here https://youtu.be/XH2iKbnvyMs.
+Check the complete implementation of our project!
+
+https://github.com/nainisha-b/SEProject510/assets/54759065/826e0739-cb17-492e-8cd4-1dc2b94f3ad6
+
+Also, you can watch the video demo of the Slash project with audio explanation and more clarity here https://youtu.be/skk1FX9sCAU.
 
 
 ---
