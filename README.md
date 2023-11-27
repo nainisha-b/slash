@@ -27,14 +27,20 @@ Slash, the openly accessible web API framework, empowers you to scour the top e-
 ## Improvements in Phase-III:
 We have added new exciting features to the Phase-II slash:
 
-1. Filtering products- Users can filter the products based on their ratings.
-2. Currency Conversion- Users have an option to view the price of the product in their desired currency. We have used an online API for the currency conversion.
-3. Add to wishlist- Users can add their products to the wishlist. Here, we used two API's getAllItems, saveCart. In wishlist, users can also refresh the wishlist to see the updated prices of the products.
-4. Logout feature- Initially, users could only login but now we have added a log out button.
-5. Enchancement of the UI design- We have changed the table format to a Card format so that users can view more products at the same time.
-6. Test cases for Front-end and improved the test cases of the back-end.
+#### 1. Filtering products:
+- Users can filter the products based on their ratings.
+#### 2. Currency Conversion:
+- Users have an option to view the price of the product in their desired currency. We have used an online API for the currency conversion.
+#### 3. Add to wishlist: 
+- Users can add their products to the wishlist. Here, we used two API's getAllItems, saveCart. In wishlist, users can also refresh the wishlist to see the updated prices of the products.
+#### 4. Logout feature: 
+- Initially, users could only login but now we have added a log out button.
+#### 5. Enchancement of the UI design: 
+- We have changed the table format to a Card format so that users can view more products at the same time.
+#### 6. Test cases for Front end and improved the test cases of the back-end.
+
    
-Features to slash in Phase-II:
+### Features to slash in Phase-II:
 
 1. A web interface for users to interact with the application in a more personalised way.
 2. Substituted web scraping with website product APIs for enhanced efficiency and speed.
@@ -59,6 +65,14 @@ These changes have significantly improved the reliability and sustainability of 
 
 Future possibilities encompass the development of web applications with intuitive interfaces and mobile applications for Android and iOS, all powered by these web APIs. Anyone can construct their custom applications atop this foundation of web APIs.".
 
+## Why customers should choose Slash?
+
+- People often look for the best deals with good ratings.
+- The widespread availability of internet connectivity has equalized the competitive landscape in retail, enabling both individuals and businesses to market and sell products without being restricted by geographical boundaries. In 2020, e-commerce sales in the United States experienced a substantial 44% growth, largely attributed to the impact of the COVID-19 pandemic. These sales accounted for over 21% of the total retail sales, as reported by the e-commerce data source, Internet Retailer.
+- The expansion of e-commerce has not just altered the shopping habits of customers but has also influenced their expectations regarding how brands handle customer service, tailor communications, and offer a variety of choices to customers.
+- The competitive environment in the e-commerce market has led to intense rivalry among retailers, evident in the pricing strategies adopted by major market players. Discounts and price reductions have become common, and securing the most favorable deal for your money can occasionally be challenging, even in the realm of online shopping.
+- This is what Slash aims to reduce by giving you an easy to use, all in one place solution for finding the best deals where users have an oppurtunity to filter products based on the rating and cheapest prices.
+- The updated version of Slash has currency conversion which is very important now-a-days as users want to know the prices of the products in their home currency.
 ---
 
 <p align="center">
@@ -102,6 +116,11 @@ Future possibilities encompass the development of web applications with intuitiv
 - The results show that users can successfully add their products to the wishlist and can refresh to see the updated prices.
 <p align="center"><img width="700" src="assets/Wishlist.jpeg"></p>
 
+### 4. Graphs:
+- The results of the graph show the lowest price and highest price of the product on each website.
+<p align="center"><img width="700" src="assets/Piechart.jpeg"></p>
+<p align="center"><img width="700" src="assets/Bargraph.jpeg"></p>
+
 ## :movie_camera: Checkout our video
 https://github.com/NCSU-Group70-CSC505-SE-Fall-23/slash/assets/70905787/fe229f61-2bec-4920-96f4-6b693a468bcf
 
@@ -136,20 +155,20 @@ For the backend setup ensure that [Python](https://www.python.org/downloads/) an
 pip3 install -r requirements.txt
 ```
 ## 3. Node Setup for Front-end 
-For the frontend setup ensure that [Node](https://nodejs.org/en/) is preinstalled.
+- For the frontend setup ensure that [Node](https://nodejs.org/en/) is preinstalled.
 
 ```
 Install node 18.17.1 #installing older version of node.js
 ```
 
-All the node requirements are listed in `client/package.json` file. Use npm to install all of those.
+- All the node requirements are listed in `client/package.json` file. Use npm to install all of those.
 
 ```
 cd client
 npm install --legacy-peer-deps
 ```
 
-For the login page setup, to install all the requirements which are listed in 'LoginPage/package.json' file. Use npm to install all of those.
+- For the login page setup, to install all the requirements which are listed in 'LoginPage/package.json' file. Use npm to install all of those.
 
 ```
 cd LoginPage
@@ -158,15 +177,24 @@ npm install mysql
 npm install cors
 npm install nodemon
 ```
+- In login page, go to services.js and update line 72 the cwd with your folder where npm start should be executed.
+
+#### Common Error faced:
+```
+cd slash
+cd package.json
+```
+- For Mac:
+In scripts line 72 change the start, give the value as "start": "react-scripts --openssl-legacy-provider start",
 
 ## 4. Setting Up SQL Work Bench:
 For MySQL Workbench setup, 
-Importing db schema
+- Importing db schema
    <p align="center"><img width="500" src="./assets/SQL_Dump.png"></p>
-Changing db credentials from services.js
+- Changing db credentials from services.js
    <p align="center"><img width="500" src="./assets/dbChange.png"></p>
 
-Facing Issues?
+- Facing Issues?
 Refer to the this [Stack Overflow](https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server) Link resolution
    
 ## 5. Run the application:
@@ -238,7 +266,7 @@ Here are the APIs used in our project:
 4. Work on test cases to improve code coverage.
 5. Host domain on public server.
 6. Price Drop Alerts using email or text notification.
-
+- Refer the issues- https://github.com/nainisha-b/slash/issues
 # Team Members
 
 ## Phase 3 Team Members
