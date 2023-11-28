@@ -35,7 +35,7 @@ We have added new exciting features to the Phase-II slash:
 - Users can add their products to the wishlist. Here, we used two API's getAllItems, saveCart. In wishlist, users can also refresh the wishlist to see the updated prices of the products.
 #### 4. Logout feature: 
 - Initially, users could only login but now we have added a log out button.
-#### 5. Enchancement of the UI design: 
+#### 5. Enhancement of the UI design: 
 - We have changed the table format to a Card format so that users can view more products at the same time.
 #### 6. Test cases for Front end and improved the test cases of the back-end.
 
